@@ -77,6 +77,8 @@ onAuthStateChanged(auth, (user) => {
     console.log('Go login first');
   }
 });
+const signoutbtn = document.getElementById('singoutbutton');
+signoutbtn.addEventListener('click', signoutmain);
 
 function signoutmain() {
   auth
@@ -90,7 +92,6 @@ function signoutmain() {
       // An error happened.
       console.error('Error signing out:', error);
     });
-
-  window.location.replace('index.html');
 }
+
 // updateuserinfo(user);
