@@ -54,3 +54,24 @@ googleLogin.addEventListener('click', function () {
       //   // ...
     });
 });
+
+function updateuserinfo(user) {
+  const email = user.email;
+  const username = user.username;
+  const profileimage = user.profileimage;
+  window.location.href = 'main.html';
+  document.getElementById('usernamefetched').textContent = username;
+}
+
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    updateuserinfo(user);
+    const uid = user.uid;
+    return uid;
+  } else {
+    alert('User Logged out \nPlease Login Again');
+    window.location.href = 'index.html';
+  }
+});
+
+// updateuserinfo(user);
