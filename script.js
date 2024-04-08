@@ -59,8 +59,11 @@ function updateuserinfo(user) {
   const email = user.email;
   const username = user.username;
   const profileimage = user.profileimage;
-  window.location.href = 'main.html';
-  document.getElementById('usernamefetched').textContent = username;
+  window.location.replace('main.html');
+
+  // Manipulate browser history to prevent going back to index.html
+  window.history.replaceState(null, '', 'main.html');
+  document.getElementById('usernamefetched').innerText = username;
 }
 
 onAuthStateChanged(auth, (user) => {
