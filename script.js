@@ -74,7 +74,6 @@ onAuthStateChanged(auth, (user) => {
     const uid = user.uid;
     return uid;
   } else {
-    alert('User Logged out \nPlease Login Again');
     window.location.href = 'index.html';
   }
 });
