@@ -74,7 +74,7 @@ onAuthStateChanged(auth, (user) => {
     const uid = user.uid;
     return uid;
   } else {
-    window.location.href = 'index.html';
+    console.log('Go login first');
   }
 });
 
