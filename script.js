@@ -5,6 +5,7 @@ import {
   getAuth,
   GoogleAuthProvider,
   signInWithPopup,
+  onAuthStateChanged,
 } from 'https://www.gstatic.com/firebasejs/10.10.0/firebase-auth.js';
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -39,6 +40,7 @@ googleLogin.addEventListener('click', function () {
       // The signed-in user info.
       const user = result.user;
       console.log(user);
+      onAuthStateChanged(user);
       window.location.href = 'main.html';
       // IdP data available using getAdditionalUserInfo(result)
       // ...
