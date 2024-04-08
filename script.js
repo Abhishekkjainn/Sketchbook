@@ -78,4 +78,19 @@ onAuthStateChanged(auth, (user) => {
   }
 });
 
+function signoutmain() {
+  auth
+    .signOut()
+    .then(() => {
+      // Sign-out successful.
+      console.log('User signed out successfully.');
+      window.location.replace('index.html'); // Redirect to the login page after signout
+    })
+    .catch((error) => {
+      // An error happened.
+      console.error('Error signing out:', error);
+    });
+
+  window.location.replace('index.html');
+}
 // updateuserinfo(user);
