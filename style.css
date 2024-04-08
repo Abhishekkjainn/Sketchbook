@@ -8,7 +8,7 @@ body{
     font-family: 'Poppins';
 }
 ::-webkit-scrollbar{
-    width: 5px;
+    width: 0px;
     box-sizing: border-box;
 }
 ::-webkit-scrollbar-thumb{
@@ -117,14 +117,33 @@ padding-top: 4%;
     height: 100%;
     background-color: rgb(36, 36, 36);
     border-radius: 40px;
+    overflow-y: scroll;
 }
-.postdiv{
-    width: 100%;
-    height: 300px;
-    border: 1px solid royalblue;
-    border-radius: 40px;
+.greeting{
+    position: sticky;
+    border-radius: 35px 35px 0 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(45, 45, 45, 0.896);
+    padding-bottom: 20px;
+    backdrop-filter: blur(10px);
+    padding-top: 20px;
 }
-
+.hellonamegreeting{
+    padding-left: 40px;
+    font-size: 20px;
+    color: rgb(126, 126, 126);
+    font-weight: 500;
+}
+.namefetched{
+    font-weight: 600;
+    color: white;
+}
+.posts{
+    height: 300vh;
+    background-color: rebeccapurple;
+}
 
 
 
