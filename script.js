@@ -74,7 +74,7 @@ function updateuserinfo(user) {
 onAuthStateChanged(auth, (user) => {
   if (user) {
     updateuserinfo(user);
-    localStorage.setItem('username', user.username);
+    localStorage.setItem('username', user.displayName);
     localStorage.setItem('useremail', user.email);
     localStorage.setItem('userimage', user.profileimage);
     const uid = user.uid;
