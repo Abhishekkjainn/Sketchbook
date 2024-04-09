@@ -41,7 +41,7 @@ googleLogin.addEventListener('click', function () {
       const user = result.user;
       console.log(user);
       onAuthStateChanged(user);
-      window.location.href = 'main.html';
+      // window.location.href = 'main.html';
       // IdP data available using getAdditionalUserInfo(result)
       // ...
     })
@@ -74,6 +74,9 @@ function updateuserinfo(user) {
 onAuthStateChanged(auth, (user) => {
   if (user) {
     updateuserinfo(user);
+    localStorage.setItem('username', user.username);
+    localStorage.setItem('useremail', user.email);
+    localStorage.setItem('userimage', user.profileimage);
     const uid = user.uid;
     return uid;
   } else {
@@ -99,7 +102,4 @@ function signoutmain() {
 
 // updateuserinfo(user);
 
-function updateinthemainpage() {
-  document.getElementById('usernamefetched').innerText =
-    localStorage.getItem('username');
-}
+function updateinthemainpage() {}
