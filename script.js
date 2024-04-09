@@ -61,6 +61,9 @@ function updateuserinfo(user) {
   const email = user.email;
   const username = user.username;
   const profileimage = user.profileimage;
+  localStorage.setItem('username', user.username);
+  localStorage.setItem('useremail', user.email);
+  localStorage.setItem('userimage', user.profileimage);
   window.location.replace('main.html');
 
   // Manipulate browser history to prevent going back to index.html
@@ -95,3 +98,8 @@ function signoutmain() {
 }
 
 // updateuserinfo(user);
+
+function updateinthemainpage() {
+  document.getElementById('usernamefetched').innerText =
+    localStorage.getItem('username');
+}
